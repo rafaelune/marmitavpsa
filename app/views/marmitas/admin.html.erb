@@ -1,0 +1,23 @@
+<h1>Admin marmitas</h1>
+
+<table>
+  <tr>
+    <th>Pessoa</th>
+    <th>Descricao</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @marmitas.each do |marmita| %>
+  <tr>
+    <td><%= marmita.pessoa %></td>
+    <td><%= marmita.descricao %></td>
+    <td><%= link_to 'Show', marmita %></td>
+    <td><%= link_to 'Edit', edit_marmita_path(marmita) %></td>
+    <td><%= link_to 'Destroy', marmita, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to 'Destroy all', all_marmitas_path, :confirm => 'Are you sure?', :method => :delete %>

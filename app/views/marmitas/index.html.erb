@@ -1,0 +1,19 @@
+<h1>Marmitas da VPSA</h1>
+
+<table>
+  <tr>
+    <th>Pessoa</th>
+    <th>Descricao</th>
+  </tr>
+
+<% @marmitas.each do |marmita| %>
+  <tr>
+    <td><%= marmita.pessoa %></td>
+    <td><%= marmita.descricao %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Nova Marmita', new_marmita_path %>

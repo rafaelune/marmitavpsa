@@ -1,0 +1,25 @@
+<%= form_for(@marmita) do |f| %>
+  <% if @marmita.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@marmita.errors.count, "error") %> prohibited this marmita from being saved:</h2>
+
+      <ul>
+      <% @marmita.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :pessoa %><br />
+    <%= f.text_field :pessoa %>
+  </div>
+  <div class="field">
+    <%= f.label :descricao %><br />
+    <%= f.text_field :descricao %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
