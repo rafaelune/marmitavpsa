@@ -93,9 +93,7 @@ class MarmitasController < ApplicationController
   
   # DELETE /marmitas/all
   def destroy_all
-    @marmitas = Marmita.all
-    @marmitas.each{ |marmita| marmita.destroy }
-
+    Marmita.destroy_all
     respond_to do |format|
       format.html { redirect_to(marmitas_url) }
       format.xml  { head :ok }
