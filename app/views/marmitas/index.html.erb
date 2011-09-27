@@ -2,12 +2,14 @@
 
 <table>
   <tr>
+    <th>Data</th>
     <th>Pessoa</th>
     <th>Descricao</th>
   </tr>
 
 <% @marmitas.each do |marmita| %>
   <tr>
+    <td><%=l marmita.created_at %></td>
     <td><%= marmita.pessoa %></td>
     <td><%= marmita.descricao %></td>
   </tr>
